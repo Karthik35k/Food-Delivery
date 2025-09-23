@@ -1,0 +1,134 @@
+.delivery-page {
+  min-height: 80vh;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 35px;
+}
+
+.delivery-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.delivery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.delivery-header h1 {
+  font-size: 2.4rem;
+  color: #df1515;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.delivery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+
+.tracking-card,
+.info-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border: 2px solid #e9ecef;
+}
+
+.tracking-card h2,
+.info-card h2 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0 0 14px 0;
+}
+
+.tracking-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+}
+
+.step + .step {
+  border-top: 1px dashed #e9ecef;
+}
+
+.step-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 4px;
+  background: #e9ecef;
+}
+
+.step.done .step-marker {
+  background: #28a745;
+}
+
+.step-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.step-title { font-weight: 600; color: #2c3e50; }
+.step-time { color: #6c757d; font-size: 0.9rem; }
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px dashed #e9ecef;
+}
+
+.info-row:first-of-type { border-top: 0; }
+.info-row span { color: #6c757d; }
+
+.link { color: #df1515; text-decoration: none; font-weight: 600; }
+.link:hover { text-decoration: underline; }
+
+.route-box {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.route-point {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.route-line {
+  height: 22px;
+  border-left: 2px dashed #c3cfe2;
+  margin: 4px 6px 8px 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.origin { background: #28a745; }
+.dot.destination { background: #df1515; }
+
+.point-title { font-weight: 600; color: #2c3e50; }
+.point-sub { color: #6c757d; font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .delivery-grid { grid-template-columns: 1fr; }
+}
+
+
