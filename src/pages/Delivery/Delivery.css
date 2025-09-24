@@ -23,6 +23,44 @@
   font-weight: 700;
 }
 
+.status-pill {
+  margin-left: 10px;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid #e9ecef;
+}
+.status-pill.processing { background: #fff8e6; color: #b7791f; border-color: #fde1a7; }
+.status-pill.preparing { background: #fff1f2; color: #b91c1c; border-color: #ffd1d6; }
+.status-pill.on_the_way { background: #eaf5ff; color: #1d4ed8; border-color: #cfe6ff; }
+.status-pill.delivered { background: #e8faef; color: #166534; border-color: #c8f0d8; }
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 12px auto 6px auto;
+  max-width: 520px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b, #ffa502);
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #6c757d;
+  font-size: 0.9rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
 .delivery-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -97,6 +135,27 @@
 .link { color: #df1515; text-decoration: none; font-weight: 600; }
 .link:hover { text-decoration: underline; }
 
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.primary { background: #df1515; color: #fff; }
+.btn.secondary { background: #ffe8e8; color: #df1515; border-color: #ffd1d1; }
+.btn.share { background: #e6f0ff; color: #1d4ed8; border-color: #cfe0ff; }
+.btn.ghost { background: transparent; color: #2c3e50; border-color: #e9ecef; }
+.btn:hover { filter: brightness(0.98); }
+
 .route-box {
   border: 2px solid #e9ecef;
   border-radius: 12px;
@@ -126,6 +185,18 @@
 
 .point-title { font-weight: 600; color: #2c3e50; }
 .point-sub { color: #6c757d; font-size: 0.9rem; }
+
+.map-placeholder {
+  margin-top: 12px;
+  height: 160px;
+  border-radius: 12px;
+  border: 2px dashed #c3cfe2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  background: #f8f9fa;
+}
 
 @media (max-width: 900px) {
   .delivery-grid { grid-template-columns: 1fr; }

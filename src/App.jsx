@@ -11,6 +11,7 @@ import HelpSupport from './pages/HelpSupport/HelpSupport'
 import EmergencyReport from './pages/EmergencyReport/EmergencyReport'
 import Delivery from './pages/Delivery/Delivery'
 import Footer from './components/Footer/Footer'
+import { OrderStatusProvider } from './context/OrderStatusContext'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import RoleSelect from './components/LoginPopup/RoleSelect'
 import ScrollToTop from './components/ScrollToTop'
@@ -29,6 +30,7 @@ import Content from './admin/pages/Content/Content'
 import Reports from './admin/pages/Reports/Reports'
 import Settings from './admin/pages/Settings/Settings'
 import Profile from './pages/Profile/Profile'
+import AdminProfile from './admin/pages/Profile/Profile'
 
 const App = () => {
 
@@ -48,6 +50,7 @@ const App = () => {
     {showLogin?<LoginPopup setShowLogin={setShowLogin} onLoginSuccess={() => setIsUserLoggedIn(true)}/>:<></>}
       <ScrollToTop />
       <div className='app'>
+        <OrderStatusProvider>
         <AdminAuthProvider>
         <Navbar setShowLogin={setShowLogin} openRoleSelect={() => setShowRoleSelect(true)} isUserLoggedIn={isUserLoggedIn} onUserLogout={() => setIsUserLoggedIn(false)}/>
         <Routes>
@@ -73,9 +76,11 @@ const App = () => {
             <Route path='content' element={<Content />} />
             <Route path='reports' element={<Reports />} />
             <Route path='settings' element={<Settings />} />
+            <Route path='profile' element={<AdminProfile />} />
           </Route>
         </Routes>
         </AdminAuthProvider>
+        </OrderStatusProvider>
       </div>
       <Footer />
     </>
