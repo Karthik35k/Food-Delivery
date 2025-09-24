@@ -12,23 +12,23 @@ const Delivery = () => {
     orderId: 'ORD-784213',
     eta: '28-35 min',
     stages: [
-      { key: 'placed', label: 'Order Placed', time: '2:05 PM', done: true },
-      { key: 'preparing', label: 'Preparing', time: '2:10 PM', done: true },
-      { key: 'picked', label: 'Picked Up', time: '2:28 PM', done: true },
+      { key: 'placed', label: 'Order Placed', time: '12:15 PM', done: true },
+      { key: 'preparing', label: 'Preparing', time: '12:22 PM', done: true },
+      { key: 'picked', label: 'Picked Up', time: '12:40 PM', done: true },
       { key: 'enroute', label: 'On the Way', time: '—', done: orderIdToStatus['#784213'] === 'on_the_way' || orderIdToStatus['#784213'] === 'delivered' },
       { key: 'delivered', label: 'Delivered', time: '—', done: orderIdToStatus['#784213'] === 'delivered' }
     ],
     rider: {
       name: 'Rahul Kumar',
-      phone: '+91 98765 43210',
+      phone: '+91 80963 20856',
       vehicle: 'AP 07 CD 1234'
     },
     restaurant: {
-      name: 'Spice Garden',
+      name: 'Mirchi Restaurant',
       address: 'Main Road, Guntur'
     },
     destination: {
-      name: 'Your Location',
+      name: '22B-14/A',
       address: 'Lakshmipuram, Guntur'
     }
   }), []);
@@ -114,7 +114,7 @@ const Delivery = () => {
               </div>
             </div>
             <div className='map-placeholder' role='img' aria-label='map placeholder'>
-              Map preview coming soon
+              <a href="https://www.google.com/maps?q=Lakshmipuram,+Guntur,+Andhra+Pradesh+522007" target="_blank" rel="noopener noreferrer">Track Delivery boy</a>
             </div>
           </div>
         </div>
