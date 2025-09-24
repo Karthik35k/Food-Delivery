@@ -8,7 +8,7 @@
   "build": "vite build",
   "lint": "eslint ",
   "preview": "vite preview",
-  "start": "node index.js"
+  "start": "vite index.js"
 },
   "dependencies": {
     "react": "^19.1.0",
