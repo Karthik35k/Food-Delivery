@@ -8,6 +8,12 @@ export const AdminAuthProvider = ({ children }) => {
 
   const login = useCallback(async (email, password) => {
     try {
+      // Allow demo admin credentials to log in without backend
+      if (email === 'admin@virtank.com' && password === 'admin123') {
+        setIsAuthenticated(true);
+        setAdminUser({ email: 'admin@virtank.com', id: 'demo-admin' });
+        return { ok: true };
+      }
       const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

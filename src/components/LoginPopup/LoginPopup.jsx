@@ -17,6 +17,12 @@ const LoginPopup = ({ setShowLogin, onLoginSuccess }) => {
     setError("")
     try {
       if (currState === 'Login') {
+        // Accept demo credentials without calling the API (useful when backend is not running)
+        if (email === DEMO_USER_EMAIL && password === DEMO_USER_PASSWORD) {
+          onLoginSuccess?.()
+          setShowLogin(false)
+          return
+        }
         const res = await fetch('/api/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
